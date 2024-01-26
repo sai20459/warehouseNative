@@ -20,8 +20,8 @@ DerivedData
 *.hmap
 *.ipa
 *.xcuserstate
-ios/.xcode.env.local
-
+.cxx/
+*.keystore
 # Android/IntelliJ
 #
 build/
@@ -30,15 +30,14 @@ build/
 local.properties
 *.iml
 *.hprof
-.cxx/
-*.keystore
-!debug.keystore
 
 # node.js
 #
-node_modules/
+node_modules*
 npm-debug.log
 yarn-error.log
+
+
 
 # fastlane
 #
@@ -51,7 +50,6 @@ yarn-error.log
 **/fastlane/Preview.html
 **/fastlane/screenshots
 **/fastlane/test_output
-
 # Bundle artifact
 *.jsbundle
 
@@ -59,8 +57,18 @@ yarn-error.log
 /ios/Pods/
 /vendor/bundle/
 
-# Temporary files created by Metro to check the health of the file watcher
-.metro-health-check*
 
-# testing
+.vscode
+package-lock.json
+yarn.lock
+
+
+build/
+dist/
+node_modules/
+aws-exports.js
+awsconfiguration.json
+.secret-*
+**.sample
+#testing
 /coverage
